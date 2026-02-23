@@ -46,7 +46,7 @@ Once set, all we need to do is type `exploit` and hit enter. . .
   
 Success! We have landed a shell on the machine. 
   
-## Maintaining access & privlege escalation
+## Pahes 3: Maintaining access & privlege escalation
 
 Now that we have a shell on the machine, we can check our access and collect our loot. Given the nature of EternalBlue, we do not need to perform any type of privlege escalation as we are already running as `nt authority\system`
 
@@ -60,7 +60,7 @@ If we were in an active engagement we can dump the hashes from the machine and a
 
 ![Checking out who we are](/assets/blue-15.png)  
   
-## Reporting & Documentation  
+## Phase 4: Reporting & Documentation  
 
 Now that we have successfully exploited our target system, we can consolidate all of our gathered observations into a report for our client. We may also make recommendations to our client as well in an effort to patch or mitigate the possibilities of this system being compromised. You could highly recommend patching this device (apply the security patch MS17-10), disabling SMBv1 if it is in the organizations ability to do so, or even segmenting the legacy system where it is signifigantly less likely to be abused.
   
