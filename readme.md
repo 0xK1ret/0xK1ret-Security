@@ -1,8 +1,3 @@
----
-layout: Test landing
-title:  "Welcome to my blog!"
----
-
 # Welcome
 
 **Hello world**, this is my first blog post.
