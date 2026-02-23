@@ -2,5 +2,5 @@ remote_theme: pages-themes/time-machine@v0.2.0
 plugins:
 - jekyll-remote-theme
 
-title: 0xK1rets Security Blo
+title: 0xK1rets Sec Blog
 description: To a guy like me, crazy train is just a normal train.
