@@ -1,8 +1,8 @@
 # Machine info
 **Name:** Blue  
 **OS:** Windows  
-**Difficulty:** :green_square: Easy  
-**Complexity:** :green_square: Low
+**Difficulty:**  Easy  
+**Complexity:**  Low
 
 
 ## Phase 1: Reconnaissance 
