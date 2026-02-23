@@ -12,7 +12,7 @@ After spawning in our machine, we can see that our machines IP address is `10.12
 We start out our engagement by taking the information we collected in the reconnaissance phase (e.g. the IP address) and begin an nmap scan. 
 `sudo nmap -Pn -n 10.129.15.253 -sC -sV -p- -oN nmap-scan-all`  
   
-![Image of our nmap scan](assets/images/blue-1.png)  
+![Image of our nmap scan](/assets/images/blue-1.png)  
   
 From this output, we can gather several pieces of key information. Multiple ports are observed as being open, notably SMB (445). We can additionally see that the host is running `Windows 7 Professional 7601 Service Pack 1`  
 Taking this information over to Google, we can find several sources citing that this OS is vulnerable to MS17-010. From our research, we can determine that this is a a critical vulnerability in SMBv1 that can allow for arbitrary code exexution on a target system.  
