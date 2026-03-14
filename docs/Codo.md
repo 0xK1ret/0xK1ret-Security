@@ -1,4 +1,4 @@
-# Machine info
+# Codo Writeup
 **Name:** Codo  
 **OS:** Linux    
 **Difficulty:**  Easy  
