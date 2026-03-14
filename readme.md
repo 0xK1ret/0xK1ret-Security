@@ -12,6 +12,7 @@
 [Nickel](docs/Nickel.md)  
 [Plum](docs/Plum.md)  
 [Scrutiny](docs/Scrutiny.md)  
+[LaVita](docs/LaVita.md)  
   
 # Vulnhub Writeups  
 
