@@ -85,7 +85,7 @@ Running through linpeas, we notice that one of the files `/var/www/html/sites/de
   
 ![Gobuster Scan](assets/codo/post-exploitation-6.png)  
   
-## Phase 4: Maintaining access & privlege escalation  
+## Phase 4: Maintaining access & privilege escalation  
   
 I open up this config file and see that this is actually the password to for mariadb.  
   
