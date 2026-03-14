@@ -100,8 +100,10 @@ After chasing this - I realized that this was not the intended path for priv esc
   
 ![Gobuster Scan](assets/codo/post-exploitation-10.png)  
   
-From here, we have numerous ways that we can maintain access on the system. We could generate our own public/private key pair for ssh since root is permitted to sign in via SSH (we can change it if it wasnt). We could set up a cron job that verifies our connection to a C2 server and reconnects if lost. It is truly dealers choice. 
+At this stage, several persistence mechanisms are available to maintain access to the system. One high-reliability method involves generating an SSH public/private key pair, as the current configuration permits root login (a setting that we can modify if necessary). Alternatively, a cron job could be established to ensure a persistent callback to a Command and Control (C2) server. The choice of implementation depends on the specific operational requirements and the desired level of stealth.  
   
 ## Phase 5: Reporting & Documentation  
   
-Initially, we were able to leverage default credentials to access the admin dashboard for Codoforum. From here we could likely have found a PoC that worked with our credentials, but were able to land a reverse shell manually via a malicious php file that was uploaded as the forum logo. We were then able to discover the mariadb password configured `config.php` in  was also utilized by the root user and achieve root access without furhter complex privlege. There are several ways in which the system admin could have protected against these attacks including updating Codoforums to a patched version, using complex passwords on all accounts, and through the practice of not re-using passwords.
+The initial compromise was facilitated by the use of default administrative credentials to access the Codoforum dashboard. While various publicly available PoC's existed (CVE-2022-31854) and were identified, access was ultimately gained through manually uploading a malicious PHP payload via the forum’s logo upload functionality. This resulted in a Reverse Shell and a foothold on the underlying system as the `www-data` user.
+
+During post-exploitation reconnaissance, the `config.php` file was discovered to contain cleartext MariaDB credentials. Due to credential reuse, these same credentials provided us with access to the root user account, allowing for full system compromise.
