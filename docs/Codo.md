@@ -10,11 +10,11 @@
 To begin, we spawn in the machine and wait for it to assign an IP address. In this case, it appears we will be attacking `192.168.132.23`  
 
 ## Phase 2: Scanning
-To begin, I run my enumeration script - which simply runs a quick nmap, a more detailed nmap, and nmap on the top 100 udp ports - then outputs into a folder I created named nmapscans.  
+Initial enumeration was performed using an automated script I created to streamline the reconnaissance process. This included a fast port discovery scan followed by a detailed service/script scan and a sweep of top 100 common UDP ports. Results were then placed into the nmapscans directory.  
   
 ![Image of our nmap scan](assets/codo/enumeration-1.png)  
   
-While the more detailed scan is running, I opt to take some time to check out the web server on port 80. Visiting `http://192.168.132.23` - we are met with a webpage titled "CODOLOGIC". We can take note that this is powered by "Codoforum". There appears to be a link, register, and login page in the upper right hand corner. We can additionally see that the user 'admin' made a post called "Welcome to Codoforum". In addition to the NMAP scan, I had started a simple GoBuster scan to enumerate sub directories of the web server.  
+While the more detailed scan is running, I opted to take some time to check out the web server on port 80. Visiting `http://192.168.132.23` - we are met with a webpage titled "CODOLOGIC". We can take note that this is powered by "Codoforum". There appears to be a link, register, and login page in the upper right hand corner. We can additionally see that the user 'admin' made a post called "Welcome to Codoforum". In addition to the NMAP scan, I had started a simple GoBuster scan to enumerate sub directories of the web server.  
   
 ![Image of the webpage](assets/codo/enumeration-2.png)  
   
